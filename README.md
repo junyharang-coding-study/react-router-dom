@@ -40,9 +40,6 @@ Router에는 기본적인 라우팅 관련 속성만 정의 되어 있기 때문
 Router에는 history 객체를 이용해 네이게이팅을 한다.
 
 
-
-출처: https://junyharang.tistory.com/165 [Juny's Complex Blog]
-
 여기서 BrowserRouter는 React Router Component의 최상위 Component를 쏴주는 Wrapper Component 
 
 
