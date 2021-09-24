@@ -7,6 +7,7 @@ https://junyharang.tistory.com/165
 
 ## 소스코드 정리<br>
 https://github.com/junyharang-coding-study/react-router-dom
+<br><br>
 
 ## React Router Dom 설치
 
@@ -29,11 +30,11 @@ import {BrowserRouter} from 'react-router-dom';
 
 Router에는 기본적인 라우팅 관련 속성만 정의 되어 있기 때문에 아래 라우터를 사용할 수 있다.
 
-* <BrowserRouter>
-* <HashRouter>
-* <MemoryRouter>
-* <NativeRouter>
-* <StaticRouter>
+* \<BrowserRouter\>
+* \<HashRouter\>
+* \<MemoryRouter\>
+* \<NativeRouter\>
+* \<StaticRouter\>
 
 
 Router에는 history 객체를 이용해 네이게이팅을 한다.
