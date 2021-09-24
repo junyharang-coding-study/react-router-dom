@@ -22,13 +22,25 @@ var contents = [ // contents라는 Array 안에 딕셔너리(Map)으로 아래 �
 function Topic() {
 
   var params = useParams();
+  var topic_id = params.topic_id;
+  var selected_topic = {
+    title: 'Sorry',
+    description: 'Not Found'
+  }
+
+  for(var i = 0; i < contents.length; i++) {
+    if (contents[i].id === Number(topic_id)) {
+      selected_topic = contents[i];
+      break;
+    }
+  }
 
   console.log('params', params);
 
   return(
     <div>
-      <h3>Topic</h3>
-      Topic is ...
+      <h3>{selected_topic.title}</h3>
+      {selected_topic.description}
     </div>
   );
 }
@@ -38,7 +50,13 @@ function Topics() { // Component는 하나의 페이지를 담당한다고 생�
   var lis = [];
 
   for(var i = 0; i < contents.length; ++i) {
-    lis.push(<li> <NavLink to={'/topics/' + contents[i].id}>{contents[i].title}</NavLink> </li>)
+    lis.push(
+      <li key={contents[i].id}> 
+        <NavLink to={'/topics/' + contents[i].id}>
+          {contents[i].title}
+        </NavLink> 
+      </li>
+    )
   }
 
   return ( // return은 실제로 페이지에 보여질 View의 내용을 담는다.
